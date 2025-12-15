@@ -1,4 +1,7 @@
-import db from "./db.json";
+import db from "./db.json" assert { type: "json" };
+
+console.log(db);
+
 
 const select = document.getElementById("roomSelect");
 const hidden = document.getElementById("propertyType");
@@ -329,4 +332,5 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 L.marker([49.5535, 25.5948]).addTo(map)
   .bindPopup('Flat')
+
   .openPopup();

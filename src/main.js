@@ -1,6 +1,19 @@
-import db from "./db.json" assert { type: "json" };
+let db = [];
 
-console.log(db);
+fetch('./db.json')
+  .then(res => {
+    if (!res.ok) throw new Error('db.json не найден');
+    return res.json();
+  })
+  .then(data => {
+    db = data;
+    startApp();
+  })
+  .catch(err => console.error('Ошибка загрузки db.json:', err));
+
+
+function startApp() {
+  console.log(db);
 
 
 const select = document.getElementById("roomSelect");
@@ -324,6 +337,9 @@ if (toggleBtn && fullDesc) {
   });
 }
 
+}
+
+
 let map = L.map('map').setView([49.5535, 25.5948], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -334,3 +350,4 @@ L.marker([49.5535, 25.5948]).addTo(map)
   .bindPopup('Flat')
 
   .openPopup();
+

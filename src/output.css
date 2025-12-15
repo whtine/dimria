@@ -1,0 +1,1150 @@
+/* Мої класи */
+/* Основные стили */
+.bold {
+  font-weight: bold;
+}
+
+.fs-19 {
+  font-size: 19px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+/* Карточка риэлтора */
+.realtor-card {
+  background-color: #8fc9f6;
+  border-radius: 10px;
+}
+
+.realtor-avatar {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+.realtor-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 40px;
+}
+
+.realtor-online {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #7fc700;
+  width: 15px;
+  height: 15px;
+  border-radius: 40px;
+  border: white solid 1px;
+}
+
+.realtor-badge {
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.realtor-name {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.realtor-status {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.realtor-btn {
+  width: 90%;
+  padding: 6px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.phone-btn {
+  background-color: #f39313;
+  color: white;
+}
+
+.chat-btn {
+  background-color: white;
+  margin-top: 10px;
+  border: black solid 0.5px;
+}
+
+.realtor-rating {
+  font-size: 28px;
+  font-weight: 700;
+  padding: 3px 5px;
+  border-radius: 30px;
+  width: 74%;
+  border: black 3px solid;
+  text-align: center;
+}
+
+.realtor-rating-text {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.realtor-info {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Верификация квартиры */
+.verify-title {
+  font-size: 20px;
+  font-weight: 640;
+}
+
+.verify-date {
+  font-size: 13px;
+}
+
+.property-item {
+  font-size: 16px;
+  font-weight: 440;
+}
+
+.property-icon {
+  font-size: 24px;
+  color: rgb(5, 165, 82);
+  margin-right: 1%;
+}
+
+/* Описание */
+.section-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.property-detail {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.check-icon {
+  margin-right: 1%;
+  color: #1a2638;
+}
+
+.property-tag {
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #dff1ff;
+  border-radius: 20px;
+  border: 1px solid #bfe3ff;
+  padding: 0 12px;
+  margin: 0 8px;
+}
+
+.property-description {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.toggle-description {
+  color: #1a2638;
+  border-bottom: 1px dotted #3b4b61;
+  width: max-content;
+  cursor: pointer;
+}
+
+.full-description {
+  display: none;
+  margin-top: 10px;
+}
+
+/* Уведомление о фидбеке */
+.feedback-notice {
+  background-color: #fff4ec;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feedback-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
+}
+
+.feedback-btn {
+  font-weight: 500;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Информация об объявлении */
+.ad-info {
+  border-radius: 8px;
+  background-color: #f3fafd;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.ad-info-item {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px;
+  margin: 0;
+}
+
+/* Контактная секция */
+.contact-section {
+  background-color: #f3fafd;
+}
+
+.contact-title {
+  padding: 12px;
+  margin: 0;
+}
+
+.contact-phone-btn {
+  background-color: #f39313;
+  padding: 12px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  height: 45%;
+  margin-bottom: 3%;
+  display: flex;
+  align-items: center;
+}
+
+.contact-chat-btn {
+  background-color: white;
+  padding: 12px;
+  border-radius: 20px;
+  border: black solid 0.5px;
+  height: 45%;
+  margin-bottom: 3%;
+  display: flex;
+  align-items: center;
+}
+
+/* Информация о доме */
+.building-address {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.building-info {
+  background-color: #f3fafd;
+  border-radius: 8px;
+}
+
+.info-subtitle {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.info-item {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#map {
+  border-radius: 8px;
+  height: 400px;
+}
+
+.infrastructure-row {
+  margin-bottom: 30px;
+}
+
+.infrastructure-category {
+  display: flex;
+  align-items: center;   
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.category-icon {
+  background-color: #d2e9fb;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;    
+  text-align: center;     
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+
+
+
+.infrastructure-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.walk-time {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  min-width: 60px;
+}
+
+
+.rating-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(#4CAF50 calc(var(--value) * 10%), #e0e0e0 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.rating-circle::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.circle-inner {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.rating-text {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Отзывы */
+.review-item {
+  margin-bottom: 16px;
+}
+
+.review-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.review-icon-read {
+  background-color: black;
+}
+
+.review-icon-add {
+  background-color: black;
+}
+
+.review-icon i {
+  color: white;
+  font-size: 20px;
+}
+
+.review-text {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  padding-left: 12px;
+}
+
+/* Футер */
+.footer {
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.footer-left, .footer-right {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-text {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 992px) {
+  .details-photos {
+    flex-direction: column;
+  }
+  
+  .details-carousel {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .realtor-card {
+    margin: 20px 0;
+    width: 100%;
+  }
+  
+  .infrastructure-row {
+    flex-direction: column;
+  }
+  
+  .col-lg-4 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .ad-info {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .ad-info-item {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-icons {
+    display: none !important;
+  }
+  
+  .verify-div .d-flex {
+    flex-direction: column;
+  }
+  
+  .contact-section .d-flex {
+    flex-direction: column;
+  }
+  
+  .contact-section .col-lg-5,
+  .contact-section .col-lg-7 {
+    width: 100%;
+  }
+  
+  .contact-phone-btn,
+  .contact-chat-btn {
+    width: 100%;
+    margin: 5px 0;
+    justify-content: center;
+  }
+  
+  .feedback-notice {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .feedback-btn {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .fs-19, .fs-20 {
+    font-size: 16px;
+  }
+  
+  .realtor-name {
+    font-size: 16px;
+  }
+  
+  .realtor-info {
+    font-size: 16px;
+  }
+  
+  .section-title {
+    font-size: 16px;
+  }
+  
+  .category-icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+  }
+  
+  .footer-left, .footer-right {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-text {
+    margin: 5px 0;
+  }
+}
+
+/* Дополнительные утилиты */
+.text-center {
+  text-align: center;
+}
+
+.mx-2 {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.my-3 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.p-3 {
+  padding: 16px;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+/* Стили для карусели */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn-back {
+    padding: 10px 15px;
+    background: rgb(216, 216, 216);
+    position: absolute;   
+    top: 10px;         
+    left: 10px; 
+    border-radius: 32px;       
+    border: none;     
+    cursor: pointer;   
+    font-size: 24px;  
+    color: #333;     
+  }
+
+  .btn-back:hover {
+    color: #000;  
+  }
+
+.details-prev {
+  left: 10px;
+}
+
+.details-next {
+  right: 10px;
+}
+
+.photos-preview-img,
+.map-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.blur-img {
+  filter: blur(2px);
+}
+
+.photos-overlay,
+.map-overlay {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.photos-text,
+.map-text {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.property-tag {
+  transition: all 0.3s ease;
+}
+
+.property-tag:hover {
+  background-color: #bfe3ff;
+  transform: translateY(-2px);
+}
+
+.realtor-btn {
+  transition: all 0.3s ease;
+}
+
+.realtor-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.toggle-description {
+  transition: all 0.3s ease;
+}
+
+.toggle-description:hover {
+  color: #0d1c30;
+  border-bottom-color: #0d1c30;
+}
+.blur-img {
+    filter: blur(2px);
+}
+
+.map-box {
+  position: relative;
+  width: 100%;
+  height: 220px;           
+  overflow: hidden;
+  border-radius: 12px;   
+  margin: 0.75rem 0;
+}
+
+.map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1.5px) brightness(0.8); 
+  transition: filter 0.3s ease;
+}
+
+
+.map-box:hover .map-img {
+  filter: blur(2px) brightness(0.6);
+}
+
+.map-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;                  
+  z-index: 10;
+}
+
+.map-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.55);   
+  backdrop-filter: blur(8px);         
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.map-icon-wrapper i {
+  font-size: 28px;
+  color: #fff;
+}
+
+
+.map-box:hover .map-icon-wrapper {
+  background: rgba(0, 0, 0, 0.75);
+  transform: scale(1.15);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+
+.map-text {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.map-box:hover .map-text {
+  transform: translateY(4px);
+}
+
+.photos-preview-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 0.75rem 0;
+}
+
+.photos-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.75) blur(1px);
+  transition: all 0.4s ease;
+}
+
+
+.photos-preview-box:hover .photos-preview-img {
+  filter: brightness(0.55) blur(2px);
+  transform: scale(1.05);
+}
+
+
+.photos-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  z-index: 10;
+  pointer-events: none; 
+}
+
+
+.photos-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;      
+  flex-grow: 0;        
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  transition: all 0.35s ease;
+}
+
+
+.photos-icon-wrapper i {
+  font-size: 30px;
+  color: #fff;
+}
+
+
+
+.photos-preview-box:hover .photos-icon-wrapper {
+  background: rgba(0, 0, 0, 0.75);
+  transform: scale(1.2);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+}
+
+
+.photos-text {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  transition: transform 0.35s ease;
+}
+
+.photos-preview-box:hover .photos-text {
+  transform: translateY(6px);
+}
+.blur-img {
+    transition: 0.3s ease;
+}
+
+.blur-img:hover {
+    filter: blur(1px);
+}
+
+.review {
+  border: 1px solid transparent; 
+  border-radius: 32px;
+  transition: border-color 0.5s ease;
+}
+
+.review:hover {
+  border-color: black; 
+}
+
+.details-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+
+.rating-circle {
+  --value: calc(attr(data-value number) * 10);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #000000 calc(var(--value) * 1%),
+    #e6e6e6 0
+  );
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-circle::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.rating-circle .circle-inner {
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+
+
+.details-carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.details-carousel img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.details-prev { left: 10px; }
+.details-next { right: 10px; }
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+
+.price {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.price-per-m {
+  margin-top: 1%;
+}
+
+.street {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.description {
+  font-weight: 600;
+}
+.bg-light-blue {
+  background-color: #8fc9f6;
+}
+
+.logo-img {
+  width: 100%;
+}
+
+.search-group {
+  box-shadow: none;
+}
+
+.search-input {
+  border: 0;
+  border-radius: 50px 0 0 50px;
+  padding: 10px 20px;
+}
+
+.search-btn {
+  border: 0;
+  border-radius: 0 50px 50px 0;
+}
+
+.header-icons i {
+  cursor: pointer;
+}
+
+.add-listing-btn {
+  border-radius: 50px;
+  padding: 5px 20px;
+}
+
+
+.custom-select-container {
+  position: relative;
+}
+
+.custom-select {
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 5px 10px;
+  user-select: none;
+}
+
+.custom-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.custom-select.active .custom-options {
+  display: block;
+}
+
+.custom-options li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.custom-options li:hover {
+  background-color: #f1f1f1;
+}
+
+
+.bg-dark {
+  background-color: #272727;
+}
+
+.footer-text {
+  color: white;
+  margin: 0;
+  padding: 1rem;
+}
+
+
+.main-text h2 {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.flat-number {
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+}
+
+.like-flat {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 8px;
+  margin: 10px;
+}
+
+.flat-text-block {
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 350px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 350px;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-carousel-slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+.details-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px 18px;
+  border: black 3px solid;
+  background: rgb(216, 216, 216);
+  border: none;
+  border-radius: 30px;
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  user-select: none;
+  opacity: 0;              
+  transition: opacity 0.3s;
+}
+
+.carousel:hover  .carousel-btn {
+  opacity: 1;
+}
+
+.details-carousel:hover  .carousel-btn {
+  opacity: 1;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+.custom-select-container {
+  width: 200px;
+}
+
+.d-flex-custom {
+  display: flex;
+}
+
+.custom-select {
+  background: #fff;
+  border-radius: 25px;
+  padding: 10px 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  font-size: 14px;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.custom-select:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.custom-select::after {
+  content: "▾";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #555;
+}
+
+.custom-options {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 110%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s;
+  z-index: 20;
+}
+
+.custom-select.active .custom-options {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.custom-options li {
+  padding: 10px 16px;
+  transition: 0.15s;
+}
+
+.custom-options li:hover {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+@media (max-width: 990px) {
+  .d-flex-custom {
+    display: block
+  }
+}
+
+

@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+.pretty-select-wrapper {
+  background: #ffffff;
+  border-radius: 50px;
+  padding: 6px 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.2s ease;
+}
+
+.pretty-select-wrapper:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.pretty-select {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  padding: 6px 0;
+  cursor: pointer;
+  appearance: none;
+}
+
+.pretty-select-wrapper {
+  position: relative;
+}
+
+.pretty-select-wrapper::after {
+  content: "▾";
+  font-size: 14px;
+  color: #555;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+

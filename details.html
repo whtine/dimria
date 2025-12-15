@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/output.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/src/style.css">
+  <title>Опис</title>
+</head>
+
+<body>
+  <header class="border-bottom">
+    <div class="header-top container-fluid">
+      <div class="row justify-content-center align-items-center py-3">
+        <div class="col-lg-1 d-lg-flex d-none"></div>
+
+        <div class="col-lg-1 col-md-2 col-3 logo-col">
+          <img src="src/img/logo.png" alt="Logo" class="logo-img">
+        </div>
+
+        <div class="col-5"></div>
+
+        <div class="col-lg-4 d-lg-flex d-none align-items-center gap-3 justify-content-end header-icons">
+          <i class="fa-regular fa-bell fa-2x"></i>
+          <i class="fa-regular fa-heart fa-2x"></i>
+          <i class="fa-regular fa-circle-user fa-2x"></i>
+          <button class="btn btn-warning add-listing-btn">
+            <i class="fa-solid fa-plus"></i> Додати оголошення
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="details-photos mt-4 d-flex">
+      <div class="details-carousel position-relative col-lg-9">
+        <div class="carousel-track details-carousel-track d-flex"></div>
+        <button class="btn-back" onclick="history.back()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="carousel-btn details-prev">&#10094;</button>
+        <button class="carousel-btn details-next">&#10095;</button>
+      </div>
+
+      <div class="col-lg-3 d-lg-flex d-none">
+        <div class="photos-preview-box position-relative m-3">
+          <img src="./src/img/img2.jpg" alt="Фото об'єкта" class="photos-preview-img blur-img">
+
+          <div class="photos-overlay" id="openPhotosModal" data-property-id="17">
+            <div class="photos-icon-wrapper">
+              <i class="fa-solid fa-expand"></i>
+            </div>
+            <p class="photos-text">Дивитися всі фото</p>
+          </div>
+        </div>
+
+        <div class="map-box position-relative m-3">
+          <img src="https://cdn.riastatic.com/docs/dom/support/5/e0/eee3493963ec3db3f79958d5847c7.jpg" alt="Map preview"
+            class="map-img">
+
+          <div class="map-overlay">
+            <div class="map-icon-wrapper">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <p class="map-text">Дивитися на мапі</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="d-flex-custom">
+      <div class="col-lg-9 col-md-12 col-sm-12">
+        <div>
+          <p class="bold">Продаж 2к квартири 59 кв. м на вул. 15-го Квітня • ID 31657008
+          </p>
+
+          <div class="d-flex">
+            <p class="px-3 fs-19">15-го Квітня вулиця</p>
+            <p class="px-3 fs-19">Тернопіль</p>
+          </div>
+
+          <div class="d-flex align-items-stretch">
+            <p class="px-3 d-flex align-items-center fs-20">
+              <span class="bold">33 926 $</span> за об'єкт
+            </p>
+            <p class="px-3 d-flex align-items-center fs-20">
+              1 445 500 грн
+            </p>
+            <p class="px-3 d-flex align-items-center fs-20">
+              24 500 грн за м²
+            </p>
+          </div>
+        </div>
+        <div class="verify-div">
+          <div class="d-flex p-3">
+            <p class="text-center checked-flat">
+              <i class="fa-solid fa-house-circle-check mx-2"></i>ПЕРЕВІРЕНА КВАРТИРА
+            </p>
+            <p class="text-center checked-flat"><i class="fa-solid fa-check mx-2"></i>ПРОДАВЕЦЬ НАДАВ ТЕХПАСПОРТ</p>
+          </div>
+          <div>
+            <p class="py-0 m-0 px-3 verify-title">Перевірено по техпаспорту</p>
+            <p class="py-0 m-0 px-3 verify-date">Дата останьої перевірки 3 вер.</p>
+          </div>
+          <div class="p-3">
+            <p class="align-items-center d-flex property-item"><i
+                class="fa-regular fa-circle-check property-icon"></i>Вторинна нерухомість</p>
+            <p class="align-items-center d-flex property-item"><i class="fa-regular fa-circle-check property-icon"></i>4
+              кімнати</p>
+            <p class="align-items-center d-flex property-item"><i class="fa-regular fa-circle-check property-icon"></i>7
+              поверх з 9</p>
+            <p class="align-items-center d-flex property-item"><i
+                class="fa-regular fa-circle-check property-icon"></i>Пропозиція від посередника</p>
+          </div>
+        </div>
+      </div>
+      <div class="realtor-card col-lg-3 mx-3 col-md-12 col-sm-12">
+        <div class="d-flex m-2">
+          <div class="realtor-avatar">
+            <img class="realtor-img" src="./src/img/img1.webp" alt="">
+            <div class="realtor-online"></div>
+          </div>
+          <div class="px-2">
+            <p class="m-0 bg-light realtor-badge">
+              <i class="fa-regular fa-circle-check"></i> ПЕРЕВІРЕНИЙ РІЄЛТОР
+            </p>
+            <p class="m-0 realtor-name">Оксана Михайлівна</p>
+            <p class="realtor-status">Онлайн</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="realtor-btn phone-btn">
+            (067) XXX XX XX
+          </button>
+          <button class="realtor-btn chat-btn">
+            Написати в чат
+          </button>
+        </div>
+        <div class="m-3 d-flex">
+          <div class="col-lg-3 text-center">
+            <p class="realtor-rating">
+              10
+            </p>
+          </div>
+          <div class="col-lg-8">
+            <p class="realtor-rating-text">Максимальний рейтинг рієлтора</p>
+          </div>
+          <div class="col-lg-1 d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+        <div>
+          <p class="realtor-info"><i class="fa-solid fa-check mx-2"></i>Працює з DimRіa 2 роки</p>
+          <p class="realtor-info"><i class="fa-solid fa-check mx-2"></i>Продає 33 об'єкти нерухомості</p>
+        </div>
+      </div>
+    </section>
+    <section class="my-3">
+      <p class="section-title">Опис від продавця</p>
+      <p class="property-detail"><i class="fa-solid fa-check check-icon"></i>Загальна площа 90м2 кухня 9м2</p>
+      <p class="property-detail"><i class="fa-solid fa-check check-icon"></i>Стіни з цегли</p>
+      <p class="property-detail"><i class="fa-solid fa-check check-icon"></i>Побудовано 1980-1989</p>
+      <p class="property-detail"><i class="fa-solid fa-check check-icon"></i>Комісія за послуги 3%</p>
+      <div class="d-flex">
+        <p class="property-tag">Тихий двір</p>
+        <p class="property-tag">У центрі</p>
+        <p class="property-tag">Оперативний показ</p>
+      </div>
+      <div class="mx-2">
+        <p class="property-description">
+          Чудова інвестиція!!!! <br>
+          Квартира в центрі міста у якій Ви зможете втілити усі Ваші мрії про власне житло. <br>
+          4 кімнати. Ключі. !!! <br>
+          Можливий торг!!!
+        </p>
+
+        <p id="toggleBtn" class="toggle-description">
+          Повний опис
+        </p>
+
+        <div id="fullDesc" class="full-description">
+          <p>
+            Характеристика будівлі: тип будинку (серія): чешка <br>
+            Характеристика приміщення: висота стелі, м: 2.5 • стан квартири: потребує ремонту/ без ремонту / ремонт не
+            завершений • утеплення: без утеплення <br>
+            Оздоблення стелі: фарбування <br>
+            Підлога (покриття): паркет <br>
+            Зовнішня обробка: без оздоблення <br>
+            Опалення: централізоване <br>
+            Підігрів води: централізований <br>
+            Приміщення: роздільний санвузол <br>
+            Обладнання • меблі • зручності: лічильник на електрику • лічильник на газ • лічильник на воду • електрика •
+            газ • інтернет <br>
+            Коли немає світла: є водопостачання • є газ <br>
+            Під'їзд: домофон <br>
+            Меблі: немає <br>
+            Розташування і оточення: тип двору: внутрішній <br>
+            Особливості планування: балкон/лоджія <br>
+            Внутрішнє оздоблення: без оздоблення <br>
+          </p>
+        </div>
+      </div>
+      <div class="feedback-notice col-lg-9">
+        <p class="feedback-title">
+          Оголошення неактуальне чи інформація неточна?
+        </p>
+        <button class="feedback-btn">
+          Написати відгук <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+      <div class="ad-info col-lg-9 my-3">
+        <p class="ad-info-item">Оголошення створенно 28 вер.</p>
+        <p class="ad-info-item">ID 33438756</p>
+        <p class="ad-info-item">Переглядів 7998</p>
+        <p class="ad-info-item">Збереженнь в обране 50</p>
+      </div>
+    </section>
+    <section>
+      <div class="contact-section col-lg-9">
+        <p class="contact-title bold">Звязатись з продавцем</p>
+        <div class="d-flex">
+          <div class="col-lg-5">
+            <div class="d-flex mx-3 p-0">
+              <div class="realtor-avatar">
+                <img class="realtor-img" src="./src/img/img1.webp" alt="">
+                <div class="realtor-online"></div>
+              </div>
+              <div class="px-2">
+                <p class="m-0 bg-light realtor-badge">
+                  <i class="fa-regular fa-circle-check"></i> ПЕРЕВІРЕНИЙ РІЄЛТОР
+                </p>
+                <p class="m-0 realtor-name">Оксана Михайлівна</p>
+                <p class="realtor-status">Онлайн</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 d-flex align-items-end">
+            <button class="contact-phone-btn mx-2">
+              (067) XXX XX XX
+            </button>
+            <button class="contact-phone-btn mx-2">
+              (067) XXX XX XX
+            </button>
+            <button class="contact-chat-btn mx-2">
+              Написати в чат
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="my-2">
+      <div>
+        <p class="section-title bold">Інформація про будинок</p>
+        <p class="building-address">вул. Медова</p>
+        <div class="d-flex">
+          <div class="building-info col-lg-4 mx-2">
+            <div class="p-3">
+              <p class="info-subtitle">Будинок</p>
+              <p class="info-item"><i class="fa-solid fa-check check-icon"></i>Збудований у 2001-2010</p>
+              <p class="info-item"><i class="fa-solid fa-check check-icon"></i>Зовні обкладений цеглою</p>
+              <p class="info-item"><i class="fa-solid fa-check check-icon"></i>2 під'їзди</p>
+              <p class="info-item"><i class="fa-solid fa-check check-icon"></i>Зовнішнє утеплення відсутнє</p>
+              <p class="info-subtitle">Двір</p>
+              <p class="info-item"><i class="fa-solid fa-check check-icon"></i>Внутрішній двір</p>
+              <p class="info-subtitle">Додаткові зручності</p>
+              <p class="info-item"><i class="fa-solid fa-check check-icon"></i>Продуктовий магазин</p>
+              <p class="info-item"><i class="fa-solid fa-check check-icon"></i>Дитячий майданчик</p>
+            </div>
+          </div>
+          <div class="col-lg-8 mx-2" id="map"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div>
+        <p class="section-title bold">Інфраструктура поруч</p>
+        <div>
+          <div class="d-flex infrastructure-row">
+            <div class="col-lg-4">
+              <p class="infrastructure-category">
+                <span class="category-icon">
+                  <i class="fa-solid fa-school"></i>
+                </span>
+                Навчальні заклади
+              </p>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">18хв</span>
+                </div>
+                <div>Галицький коледж, Корпус №3</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">23хв</span>
+                </div>
+                <div>ТНТУ, к. № 9 „Сатурн"</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">37хв</span>
+                </div>
+                <div>Європейський університет</div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <p class="infrastructure-category">
+                <span class="category-icon">
+                  <i class="fa-solid fa-rocket"></i>
+                </span>
+                Дитячий садок
+              </p>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">3хв</span>
+                </div>
+                <div>Дитячий садок № 17</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">6хв</span>
+                </div>
+                <div>Дитячий садок № 9</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">10хв</span>
+                </div>
+                <div>Дитячий садок № 3</div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <p class="infrastructure-category">
+                <span class="category-icon">
+                  <i class="fa-solid fa-school"></i>
+                </span>
+                Школа
+              </p>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">5хв</span>
+                </div>
+                <div>Школа № 26</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">6хв</span>
+                </div>
+                <div>Школа № 27</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">10хв</span>
+                </div>
+                <div>Станція юних техніків</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex infrastructure-row">
+            <div class="col-lg-4">
+              <p class="infrastructure-category">
+                <span class="category-icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+                ТЦ, ринок, магазини
+              </p>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">2хв</span>
+                </div>
+                <div>Універсальний („Болгарський")</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">12хв</span>
+                </div>
+                <div>АТБ-Маркет</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">14хв</span>
+                </div>
+                <div>ТЦ „Рай Центр"</div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <p class="infrastructure-category">
+                <span class="category-icon">
+                  <i class="fa-solid fa-star-of-life"></i>
+                </span>
+                Лікарня
+              </p>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">4хв</span>
+                </div>
+                <div>Комунальне некомерційне підприємство (ТМКСП)</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">8хв</span>
+                </div>
+                <div>D.S.</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">9хв</span>
+                </div>
+                <div>Підстанція №3 Тернопільської станції екстреної (швидкої) медичної допомоги</div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <p class="infrastructure-category">
+                <span class="category-icon">
+                  <i class="fa-solid fa-tree"></i>
+                </span>
+                Паркові зони
+              </p>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">8хв</span>
+                </div>
+                <div>Cквер ім. Андрія Первозваного</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">11хв</span>
+                </div>
+                <div>Бульвар Дмитра Вишневецького</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">18хв</span>
+                </div>
+                <div>Сквер</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex infrastructure-row">
+            <div class="col-lg-4">
+              <p class="infrastructure-category">
+                <span class="category-icon">
+                  <i class="fa-solid fa-bus"></i>
+                </span>
+                Транспортна розв'язка
+              </p>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">3хв</span>
+                </div>
+                <div>бульвар Куліша</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">5хв</span>
+                </div>
+                <div>вул. В. Симоненка, кінцева</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">8хв</span>
+                </div>
+                <div>вул. В. Симоненка</div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <p class="infrastructure-category">
+                <span class="category-icon">
+                  <i class="fa-solid fa-square-parking"></i>
+                </span>
+                Наземний паркінг
+              </p>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">1хв</span>
+                </div>
+                <div>15 Квітня вулиця</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">4хв</span>
+                </div>
+                <div>Cимоненка вулиця</div>
+              </div>
+              <div class="infrastructure-item">
+                <div class="walk-time">
+                  <i class="fa-solid fa-person-walking"></i>
+                  <span class="ms-1">7хв</span>
+                </div>
+                <div>Пантелеймона Куліша бульвар</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div>
+        <p class="section-title bold">Рейтинг району Молодіжний</p>
+        <div class="d-flex">
+          <div class="row col-lg-8">
+            <div class="col-lg-6">
+              <div class="d-flex mb-4 align-items-center">
+                <div class="rating-circle" data-value="5.2">
+                  <div class="circle-inner">5.2</div>
+                </div>
+                <p class="ms-3 rating-text">Загальний рейтинг</p>
+              </div>
+              <div class="d-flex mb-4 align-items-center">
+                <div class="rating-circle" data-value="6.8">
+                  <div class="circle-inner">6.8</div>
+                </div>
+                <p class="ms-3 rating-text">Транспорт</p>
+              </div>
+              <div class="d-flex mb-4 align-items-center">
+                <div class="rating-circle" data-value="7.4">
+                  <div class="circle-inner">7.4</div>
+                </div>
+                <p class="ms-3 rating-text">Безпека</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex mb-4 align-items-center">
+                <div class="rating-circle" data-value="4.9">
+                  <div class="circle-inner">4.9</div>
+                </div>
+                <p class="ms-3 rating-text">Екологія</p>
+              </div>
+              <div class="d-flex mb-4 align-items-center">
+                <div class="rating-circle" data-value="6.2">
+                  <div class="circle-inner">6.2</div>
+                </div>
+                <p class="ms-3 rating-text">Інфраструктура</p>
+              </div>
+              <div class="d-flex mb-4 align-items-center">
+                <div class="rating-circle" data-value="5.7">
+                  <div class="circle-inner">5.7</div>
+                </div>
+                <p class="ms-3 rating-text">Комфорт проживання</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex mb-4 align-items-center review-item">
+              <div class="review-icon review-icon-read">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <p class="ms-3 review-text">
+                Читати всі 80 відгуків про район Молодіжний
+              </p>
+            </div>
+            <div class="d-flex mb-4 align-items-center review-item">
+              <div class="review-icon review-icon-add">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <p class="ms-3 review-text">
+                Додати відгук про район Молодіжний
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer bg-dark d-flex">
+      <div class="col-lg-3 d-flex footer-left">
+        <p class="footer-text">© 2014-2025</p>
+        <p class="footer-text">RIA.com</p>
+        <p class="footer-text">Автомобілі</p>
+      </div>
+      <div class="col-lg-6"></div>
+      <div class="col-lg-3 d-flex footer-right">
+        <p class="footer-text">© 2014-2025</p>
+        <p class="footer-text">RIA.com</p>
+        <p class="footer-text">Автомобілі</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

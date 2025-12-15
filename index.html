@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вибір</title>
+  <link rel="stylesheet" href="/src/output.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-top container-fluid bg-light-blue">
+      <div class="row justify-content-center align-items-center py-3">
+        <div class="col-lg-1 d-lg-flex d-none"></div>
+        <div class="col-lg-1 col-md-2 col-3 logo-col">
+          <img src="src/img/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="col-lg-6 col-md-10 col-9 search-col">
+          <div class="input-group search-group">
+            <input type="text" class="form-control search-input" placeholder="Район, вулиця, метро, ЖК">
+            <button class="btn btn-light search-btn" type="button">
+              <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-4 d-lg-flex d-none align-items-center gap-3 justify-content-end header-icons">
+          <i class="fa-regular fa-bell fa-2x"></i>
+          <i class="fa-regular fa-heart fa-2x"></i>
+          <i class="fa-regular fa-circle-user fa-2x"></i>
+          <button class="btn btn-warning add-listing-btn">
+            <i class="fa-solid fa-plus"></i> Додати оголошення
+          </button>
+        </div>
+      </div>
+
+      <div class="d-lg-flex d-none header-filters">
+        <div class="col-lg-1"></div>
+        <div class="custom-select-container mb-2">
+          <div class="custom-select" id="roomSelect">
+            <span>Кількість кімнат</span>
+            <ul class="custom-options">
+              <li data-value="1">1 кімната</li>
+              <li data-value="2">2 кімнати</li>
+              <li data-value="3">3 кімнати</li>
+              <li data-value="4">4 кімнати</li>
+            </ul>
+          </div>
+        </div>
+        <input type="hidden" id="propertyType">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="main-text">
+      <h2>Продаж нерухомості у Тернополі</h2>
+      <h4 class="flat-number" id="flat-number"></h4>
+    </section>
+    <section id="listings"></section>
+  </main>
+
+  <footer>
+    <div class="footer bg-dark d-flex">
+      <div class="col-lg-3 d-flex footer-left">
+        <p class="footer-text">© 2014-2025</p>
+        <p class="footer-text">RIA.com</p>
+        <p class="footer-text">Автомобілі</p>
+      </div>
+      <div class="col-lg-6"></div>
+      <div class="col-lg-3 d-flex footer-right">
+        <p class="footer-text">© 2014-2025</p>
+        <p class="footer-text">RIA.com</p>
+        <p class="footer-text">Автомобілі</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

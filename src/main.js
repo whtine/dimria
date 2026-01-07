@@ -637,8 +637,6 @@ let db = [
 ]
 ;
 
-console.log(porno);
-
 fetch('/dimria/src/db.json')
 
 
@@ -981,6 +979,7 @@ L.marker([49.5535, 25.5948]).addTo(map)
   .bindPopup('Flat')
 
   .openPopup();
+
 
 
 

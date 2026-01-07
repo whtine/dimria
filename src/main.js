@@ -1,5 +1,7 @@
 let db = [];
 
+console.log(porno);
+
 fetch('/dimria/src/db.json')
   .then(res => {
     if (!res.ok) throw new Error('db.json не найден');
@@ -350,5 +352,6 @@ L.marker([49.5535, 25.5948]).addTo(map)
   .bindPopup('Flat')
 
   .openPopup();
+
 
 

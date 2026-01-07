@@ -636,11 +636,6 @@ let db = [
   }
 ]
 ;
-
-fetch('/dimria/src/db.json')
-
-
-
 function startApp() {
   console.log(db);
 
@@ -979,6 +974,7 @@ L.marker([49.5535, 25.5948]).addTo(map)
   .bindPopup('Flat')
 
   .openPopup();
+
 
 
 
